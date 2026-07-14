@@ -59,8 +59,11 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    // Hide loader once data arrives
-    if (loader) loader.style.display = 'none';
+    // Fade out loader once data arrives
+    if (loader && !loader.classList.contains('fade-out')) {
+      loader.classList.add('fade-out');
+      setTimeout(() => { loader.style.display = 'none'; }, 500);
+    }
     
     // Apply staggered animation after a tiny delay to ensure DOM is ready
     setTimeout(() => {

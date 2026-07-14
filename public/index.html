@@ -18,6 +18,12 @@
     <div class="blob blob-2"></div>
   </div>
 
+  <div id="loader" class="loader-screen">
+    <div class="loader-ring"></div>
+    <div class="loader-brand">HannoGeoBot</div>
+    <div class="loader-sub">Loading commands...</div>
+  </div>
+
   <div class="container">
     <header class="header">
       <div class="logo-container">
@@ -25,10 +31,6 @@
       </div>
       <p class="subtitle">The complete command reference for HannoGeo's Twitch bot.</p>
     </header>
-
-    <div id="loader" style="text-align: center; margin: 4rem 0;">
-      <div class="cmd-name" style="animation: pulse 1.5s infinite;">Loading Commands...</div>
-    </div>
 
     <main id="main-grid" class="commands-grid">
       <!-- Dynamically populated -->
@@ -42,14 +44,6 @@
       <!-- Dynamically populated -->
     </div>
   </div>
-
-  <style>
-    @keyframes pulse {
-      0% { opacity: 0.5; transform: scale(0.98); }
-      50% { opacity: 1; transform: scale(1); }
-      100% { opacity: 0.5; transform: scale(0.98); }
-    }
-  </style>
 
   <script type="module">
     import { auth, db } from './assets/js/firebase-config.js';
