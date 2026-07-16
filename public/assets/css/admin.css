@@ -7,75 +7,81 @@
 }
 
 .login-card {
-  background: var(--card-bg);
-  backdrop-filter: blur(16px);
-  border: 1px solid var(--card-border);
+  background: var(--surface);
+  border: 1px solid var(--border);
   padding: 3rem;
-  border-radius: 24px;
+  border-radius: 12px;
   text-align: center;
   width: 100%;
-  max-width: 450px;
+  max-width: 400px;
 }
 
 .login-card h2 {
-  font-size: 2.5rem;
+  font-size: 1.8rem;
+  font-weight: 600;
   margin-bottom: 2rem;
-  background: linear-gradient(135deg, #c4b5fd 0%, #a78bfa 50%, #06b6d4 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  letter-spacing: -0.5px;
 }
 
 .form-group {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
   text-align: left;
 }
 
 .form-group label {
   display: block;
-  margin-bottom: 0.5rem;
-  color: var(--text-secondary);
+  margin-bottom: 0.4rem;
+  color: var(--text-dim);
+  font-size: 0.9rem;
 }
 
-.form-group input, .form-group select, .form-group textarea {
+.form-group input,
+.form-group select,
+.form-group textarea {
   width: 100%;
-  padding: 0.8rem 1rem;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid var(--card-border);
-  border-radius: 12px;
-  color: var(--text-primary);
+  padding: 0.7rem 0.9rem;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text);
   font-family: inherit;
-  font-size: 1rem;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  font-size: 0.95rem;
+  transition: border-color 0.2s ease;
 }
 
-.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
   outline: none;
-  border-color: var(--accent-color);
-  box-shadow: 0 0 0 3px rgba(167, 139, 250, 0.15);
+  border-color: #555;
 }
 
 .admin-btn {
-  background: var(--accent-color);
-  color: white;
+  background: var(--text);
+  color: var(--bg);
   border: none;
-  padding: 1rem 2rem;
-  border-radius: 12px;
-  font-size: 1.1rem;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
   font-weight: 500;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: opacity 0.2s ease;
   width: 100%;
 }
 
 .admin-btn:hover {
-  background: var(--accent-hover);
-  transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(167, 139, 250, 0.3);
+  opacity: 0.85;
 }
 
-.btn-delete { background: #334155; }
-.btn-delete:hover { background: #ef4444; }
+.btn-delete {
+  background: var(--border);
+  color: var(--text-dim);
+}
+
+.btn-delete:hover {
+  background: #dc2626;
+  color: white;
+}
 
 .dashboard-header-ui {
   display: flex;
@@ -85,20 +91,18 @@
 }
 
 .section-title {
-  color: var(--text-secondary);
-  font-size: 0.9rem;
+  color: var(--text-dim);
+  font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 2px;
-  margin-bottom: 2rem;
-  border-left: 3px solid var(--accent-color);
-  padding-left: 1rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border);
 }
 
 /* Admin Card Modifications */
 .admin-grid .command-card {
   cursor: grab;
-  opacity: 1;
-  transform: none;
   animation: none;
 }
 
@@ -109,13 +113,13 @@
 .admin-actions {
   display: flex;
   gap: 0.5rem;
-  margin-top: 1.5rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid var(--card-border);
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
 }
 
 .btn-small {
-  padding: 0.5rem 1rem;
+  padding: 0.4rem 0.8rem;
   font-size: 0.8rem;
   width: auto;
 }
@@ -123,26 +127,28 @@
 /* SortableJS Ghost Effect */
 .sortable-ghost {
   opacity: 0.3;
-  border: 2px dashed var(--accent-color);
+  background: var(--border) !important;
 }
 
 /* Modal */
 .modal {
   position: fixed;
-  top: 0; left: 0; width: 100%; height: 100%;
-  background: rgba(4, 3, 15, 0.88);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
   display: none;
   justify-content: center;
   align-items: center;
   z-index: 1000;
-  backdrop-filter: blur(10px);
 }
 
 .modal-content {
-  background: #0f0e24;
-  padding: 3rem;
-  border-radius: 24px;
+  background: var(--surface);
+  padding: 2.5rem;
+  border-radius: 12px;
   width: 90%;
-  max-width: 550px;
-  border: 1px solid var(--card-border);
+  max-width: 500px;
+  border: 1px solid var(--border);
 }
