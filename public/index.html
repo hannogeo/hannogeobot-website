@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HannoGeoBot Commands</title>
+  <title>HannoGeoBot</title>
   <link rel="icon" href="assets/img/hannog.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,18 +20,49 @@
   <div class="container">
     <header class="header">
       <h1>HannoGeoBot</h1>
-      <p class="subtitle">The complete command reference for HannoGeo's Twitch bot.</p>
+      <p class="subtitle">Points, rewards, and commands for HannoGeo's Twitch channel.</p>
     </header>
+
+    <section class="info-section">
+      <h2 class="info-title">About the bot</h2>
+      <p class="info-text">
+        HannoGeoBot keeps chat fun and rewards the people who hang around. It runs
+        games, tracks stats, and hands out points that can be spent on rewards or
+        gambled away with the commands below.
+      </p>
+      <div class="info-grid">
+        <div class="info-item">
+          <span class="info-label">Follow (1,000 points)</span>
+          <span class="info-desc">Earn points for following the channel.</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">Subscribe (5,000 points)</span>
+          <span class="info-desc">For subscribing, resubscribing, or gifting a sub.</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">Raid (3,000 points)</span>
+          <span class="info-desc">Earn points for raiding the channel.</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">Redeem First (1,000 points)</span>
+          <span class="info-desc">Be first in chat to claim the bonus.</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">Watch (5 points every 5 minutes)</span>
+          <span class="info-desc">Keep watching the stream to earn points.</span>
+        </div>
+      </div>
+    </section>
+
+    <h2 class="section-label">Commands</h2>
 
     <main id="main-grid" class="commands-grid">
       <!-- Dynamically populated -->
     </main>
 
-    <div class="toggle-container">
-      <button id="toggle-btn" class="more-btn">Gamble away your points</button>
-    </div>
+    <h2 class="section-label spaced">Gamble commands</h2>
 
-    <div id="extra-commands" class="commands-grid hidden">
+    <div id="extra-commands" class="commands-grid">
       <!-- Dynamically populated -->
     </div>
   </div>
